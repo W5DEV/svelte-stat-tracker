@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--color-txt-main: 0deg 0% 90%;
+		--color-txt-accent: 0deg 0% 70%;
+		--color-lines: 0deg 0% 15%;
+		--color-bkg: 0deg 0% 9%;
+		--color-accent: 173deg 80% 40%;
+	}
+}
+
+body {
+	@apply flex flex-col items-center justify-between w-screen min-h-screen;
+	@apply bg-bkg;
+	@apply text-txt-main;
+}
+
+header {
+	@apply flex items-center justify-center;
+	@apply border-b border-lines;
+	@apply h-16 w-full;
+	@apply px-8;
+}
+
+nav {
+	@apply flex flex-row items-center justify-between;
+	@apply w-full;
+}
+
+.headerNav {
+	@apply flex items-center justify-center self-center;
+	@apply flex-1;
+	@apply gap-8;
+}
+
+.headerNav li {
+	@apply flex;
+}
+
+.headerNav a {
+	@apply text-sm font-semibold;
+	@apply text-txt-main hover:text-accent;
+}
+
+.logoColor {
+	@apply text-accent;
+}
+
+main {
+	@apply flex w-full h-auto flex-col items-center justify-center gap-4;
+	@apply flex-1 p-4 md:p-12 lg:p-24;
+	@apply text-center;
+}
+
+h1 {
+	@apply flex flex-col items-center justify-center;
+	@apply text-5xl lg:text-6xl font-bold text-accent;
+}
+
+p {
+	@apply text-lg;
+}
+
+.navLogoContainer {
+	@apply flex items-center justify-center;
+	@apply w-24;
+}
+
+.navIconContainer {
+	@apply flex items-center justify-center;
+	@apply hover:text-accent;
+	@apply text-txt-main;
+	@apply w-24;
+}
+
+.navIcon {
+	@apply h-6 w-6;
+	@apply hover:text-accent;
+	@apply text-txt-main;
+	@apply cursor-pointer;
+}
+
+.navButton {
+	@apply py-1 px-2;
+	@apply bg-accent;
+	@apply rounded-md;
+	@apply text-bkg;
+	@apply font-semibold;
+	@apply outline outline-1 outline-accent;
+	@apply hover:bg-bkg hover:text-accent;
+	@apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+}
+
+footer {
+	@apply w-full mx-auto flex-col gap-3.5 max-w-7xl py-9 flex;
+}
+
+.footerLogoLine {
+	@apply w-full h-px bg-lines flex items-center justify-center mb-8;
+}
+
+.footerLogo {
+	@apply bg-bkg p-4;
+}
+
+.footerIcons {
+	@apply flex flex-row justify-center items-center;
+	@apply gap-4;
+}
+
+.footerIcon {
+	@apply h-6 w-6;
+	@apply text-txt-main;
+	@apply hover:text-accent;
+	@apply cursor-pointer;
+}
+
+.footerNav {
+	@apply flex flex-row items-center justify-center;
+	@apply gap-4;
+}
+
+.footerNav li {
+	@apply flex;
+}
+
+.footerNav a {
+	@apply text-sm font-medium;
+	@apply text-txt-main hover:text-accent;
+}
+
+.copy {
+	@apply text-txt-accent;
+	@apply text-sm text-center;
+	@apply flex items-center justify-center;
+	@apply h-full w-full;
+}
+
+.formInputContainer {
+	@apply flex flex-col items-start justify-center py-2 w-full;
+	@apply gap-4;
+}
+
+.formInput {
+	@apply w-full h-12;
+	@apply bg-bkg;
+	@apply border-2 border-lines;
+	@apply rounded-md;
+	@apply px-4;
+	@apply text-txt-main;
+	@apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+	@apply focus:border-accent;
+}
+
+.formSelect {
+	@apply w-full h-12;
+	@apply bg-bkg;
+	@apply border-2 border-lines;
+	@apply rounded-md;
+	@apply px-4;
+	@apply text-txt-main;
+	@apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+	@apply focus:border-accent;
+}
+
+.formTextArea {
+	@apply w-full h-32;
+	@apply bg-bkg;
+	@apply border-2 border-lines;
+	@apply rounded-md;
+	@apply px-4;
+	@apply py-2;
+	@apply text-txt-main;
+	@apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+	@apply focus:border-accent;
+}
+
+.formButton {
+	@apply w-full h-12;
+	@apply bg-bkg;
+	@apply rounded-md border-2 border-accent;
+	@apply text-txt-main;
+	@apply font-semibold;
+	@apply hover:bg-accent;
+	@apply focus:outline-none focus:ring-0 focus:ring-offset-0;
+}
